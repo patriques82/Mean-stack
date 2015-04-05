@@ -13,9 +13,10 @@ Here is a quick guide on how to setup your project and get going quickly.
 
 ```sh
 $ git clone https://github.com/patriques82/Mean-stack.git
-$ cd mean-stack
+$ cd Mean-stack
 $ npm -g install grunt-cli bower
 $ npm install
+$ mongod
 $ grunt develop
 
 Code...
