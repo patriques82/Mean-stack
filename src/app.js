@@ -1,7 +1,7 @@
 /**
  * This file holds all front-end routing logic and is the entry point
  */
-angular.module('supplierApp', [
+angular.module('app', [
   // External resources
   'ngResource',
   'ui.router',
@@ -11,9 +11,7 @@ angular.module('supplierApp', [
   'templates-main',
   'common',
   'modules.navbar',
-  'modules.suppliers',
   'modules.home',
-  'modules.user',
   'modules.login'
 ])
 
@@ -40,7 +38,6 @@ angular.module('supplierApp', [
     );
   }
 ])
-
 
 // Configuration of application
 .config(['$locationProvider', '$httpProvider', '$urlRouterProvider',

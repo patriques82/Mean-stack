@@ -2,8 +2,8 @@ angular.module('modules.home', ['home.controllers'])
 
 .config(['$stateProvider', function($stateProvider) {
 
-  $stateProvider.state('hem', {
-    url: '/hem',
+  $stateProvider.state('home', {
+    url: '/home',
     views: {
       'main@': {
         controller: 'HomeController',

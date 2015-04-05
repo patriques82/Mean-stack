@@ -28,7 +28,7 @@ angular.module('common.services.userservice', [])
     if (token) {
       return $http.get('/api/me');
     } else {
-      return $q.reject({ message: 'Obehöriga äger ej tillträde.' });
+      return $q.reject({ message: 'Undenied access' });
     }
   };
 

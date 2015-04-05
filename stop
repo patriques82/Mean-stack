@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script is for usage on deployment server
+# Execute this script: $ sudo ./stop
+
 echo "---> Stopping node server..."
 ./node_modules/forever/bin/forever stop server.js
 echo "---> Stopping mongodb..."

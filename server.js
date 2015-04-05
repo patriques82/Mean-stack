@@ -7,7 +7,6 @@ var express = require('express'),
     path = require('path'),
     methodOverride = require('method-override'); // for heroku
 
-
 // Middleware
 // parse post requests
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -47,5 +46,5 @@ server.all('/*', function(req, res, next) {
 // Conncetion
 var port = process.env.PORT || 5000;
 server.listen(port, function() {
-    console.log("Listening on " + port);
+  console.log("Listening on " + port);
 });

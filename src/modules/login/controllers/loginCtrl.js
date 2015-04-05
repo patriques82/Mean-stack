@@ -26,7 +26,7 @@ angular.module('login.controllers.loginctrl', [])
     });
   };
 
-    // Function for loading modal (registration)
+  // Function for loading modal (registration)
   $scope.showRegistration = function () {
     // Modal for registration
     var regModal = $modal.open({

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script is for usage on deployment server and requires you have installed
+# mongodb on the instance
 # Execute this script: $ sudo ./start
 
 echo "---> Starting mongod..."

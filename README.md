@@ -7,46 +7,44 @@ developing a MEAN application. Mean-stack is based on:
 
 ## Quick Start
 
-Här följer en beskrivning av arbetssätt med projektet och en snabb genomgång av
-strukturen i projektet. Det är särskilt viktigt att arbetssättet följs för att
-allt ska fungera.
+Here is a quick guide on how to setup your project and get going quickly.
 
 ### Workflow
 
 ```sh
-$ git clone https://pnygren@bitbucket.org/pnygren/oviu.git
-$ cd oviu
+$ git clone https://github.com/patriques82/Mean-stack.git
+$ cd mean-stack
 $ npm -g install grunt-cli bower
 $ npm install
 $ grunt develop
 
-Koda...
-Kolla att allt fungerar...
+Code...
+Check that everything works...
 
 $ grunt deploy
 $ git add <changed/added files>
 $ git commit -m "Specific description of work..."
 $ git pull
-Eventuellt fixa konflikter och committa dessa...
+Eventually fix conflicts...
 $ git push
 
-Ät och vila...
+Eat and sleep...
 
 $ git pull
 $ grunt develop
 
-Koda..
-Kolla att allt fungerar, osv...
+Code...
+Check that everything works...
 ```
 
-Öppna `http://localhost:5000` i din browser...
+Open `http://localhost:5000` in your browser...
 
 Happy hacking!
 
 ### Overall Directory Structure
 
 ```
-oviu/
+mean-stack/
   |- api/
   |  |- <api logic + database>
   |- node_modules/
