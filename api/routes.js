@@ -30,24 +30,6 @@ module.exports = function (router) {
     // POST (login)
     .post(UserController.authenticate);
 
-  // Route for suppliers
-  router.route('/supplier')
-    // GET (Read) all suppliers for user
-    .get(SupplierController.list)
-    // POST (Create) a new supplier
-    .post(SupplierController.create);
-
-    // Route for one supplier
-  router.route('/supplier/:supplier_id')
-    // GET (Read) one suppliers for user
-    .get(SupplierController.get)
-
-    //PUT (update) one supplier, find it på ID
-    .put(SupplierController.getOneAndUpdateSupplier)
-
-    //Delete one supplier by ID
-    .delete(SupplierController.delete);
-
   // PRIVATE ROUTES
 
   // Middleware before private routes
@@ -60,7 +42,7 @@ module.exports = function (router) {
         if(err) { // NO: False token
           return res.status(403).send({
             success: false,
-            message: "Obehöriga äger ej tillträde."
+            message: "Undenied access."
           });
         } else { // Yes: Ok token (pass token on, on req param)
           req.decoded = decoded;
@@ -70,7 +52,7 @@ module.exports = function (router) {
     } else { // NO: No token
       return res.status(403).send({
         success: false,
-        message: "Obehöriga äger ej tillträde."
+        message: "Undenied access."
       });
     }
   });

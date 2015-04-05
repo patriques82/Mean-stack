@@ -33,27 +33,27 @@ module.exports.create = function(req, res) {
           success: false,
           userdata: userdata,
           error: "mail",
-          message: req.body.email + " är redan registrerat."
+          message: req.body.email + " is already occupied."
         });
       } else if(err.errors.password) { // not min-lenght 8 on password
         return res.json({
           success: false,
           userdata: userdata,
           error: "password",
-          message: "Ogiltigt lösenord."
+          message: "Too weak password."
         });
       } else { // something else went wrong, investigate
         return res.json({
           success: false,
           userdata: userdata,
           error: "unknown",
-          message: "Något gick fel vid valideringen. Var vänlig att försök igen."
+          message: "Something went wrong during validation. Please try again."
         });
       }
     } else { // Success!
       return res.json({
         success: true,
-        message: "Lyckad registrering!"
+        message: "Successfull registration!"
       });
     }
   });
@@ -72,14 +72,14 @@ module.exports.authenticate = function(req, res) {
     if(!user) { // No user found (Security: do not display that fact)
       res.json({
         success: false,
-        message: "Fel epost eller lösenord."
+        message: "Wrong email or password."
       });
     } else if(user) {
       var validPassword = user.comparePasswords(req.body.password);
       if(!validPassword) { // Not valid password
         res.json({
           success: false,
-          message: "Fel epost eller lösenord."
+          message: "Wrong email or password."
         });
       } else {
         var token = jwt.sign({
