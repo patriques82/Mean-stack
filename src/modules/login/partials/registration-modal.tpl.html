@@ -3,7 +3,7 @@
     <div class="modal-content">
 
       <div class="modal-header text-center">
-        <h4 class="modal-title authform-header-content">Registrera dig</h4>
+        <h4 class="modal-title authform-header-content">Register</h4>
         <span type="button" class="glyphicon glyphicon-remove pull-right
           authform-header-content" id="authform-close" data-dismiss="modal"
           ng-click="regDismiss()">
@@ -28,10 +28,10 @@
               <input type="text" class="form-control" id="user-name" name="userName"
                 ng-model="user.name"
                 required
-                placeholder="Ditt namn">
+                placeholder="Your name">
             </div>
             <p class="help-block" ng-show="regForm.userName.$invalid && regForm.userName.$dirty">
-              <span>Du glömde ange ditt namn.</span>
+              <span>You forgot to write your name</span>
             </p>
           </div>
 
@@ -53,10 +53,10 @@
             </div>
             <p class="help-block" ng-show="regForm.userEmail.$invalid &&
               regForm.userEmail.$dirty">
-              <span>Du måste ange en giltig epostadress.</span>
+              <span>You must specify a valid email</span>
             </p>
             <p class="help-block" ng-show="mailerror">
-              <span>Denna mail adress är redan registrerad.</span>
+              <span>This emailaddress is already occupied</span>
             </p>
           </div>
 
@@ -75,20 +75,17 @@
                 ng-model="user.password"
                 ng-minlength="8"
                 required
-                placeholder="Lösenord">
+                placeholder="Password">
             </div>
             <p class="help-block" ng-show="regForm.userPassword.$invalid &&
               regForm.userPassword.$dirty || passworderror">
-              <span>Ditt lösenord måste innehålla minst 8 tecken.</span>
+              <span>Your password must contain minimum of 8 letters</span>
             </p>
           </div>
 
           <div class="form-group"
             ng-class="{ 'has-error' : regForm.userConfirm.$invalid &&
             regForm.userConfirm.$dirty }">
-           <!--  <label for="user-confirm" class="control-label">
-              Lösenord:
-            </label> -->
             <div class="input-group">
               <span class="input-group-addon">
                 x2
@@ -98,27 +95,21 @@
                 ng-model="user.confirm"
                 password-verify="user.password"
                 required
-                placeholder="Repetera lösenord">
+                placeholder="Repeat password">
             </div>
             <p class="help-block" ng-show="regForm.userConfirm.$error.passwordVerify">
-              <span>Du angav inte samma lösenord som ovan.</span>
+              <span>You did not repeat the password correctly</span>
             </p>
           </div>
 
           <div class="modal-footer text-center">
             <button type="submit" class="btn btn-block btn-lg btn-wind">
-              Registrera
+              Register
             </button>
           </div>
         </form>
       </div>
 
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal"
-          ng-click="regDismiss()">
-          Stäng
-        </button>
-      </div> -->
     </div>
   </div>
 </div>
