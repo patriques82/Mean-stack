@@ -4,8 +4,7 @@ var mongoose = require('mongoose'),
     config = require('../config.app');
 
 // Controllers for specific resources
-var UserController = require('./controllers/usercontroller'),
-    SupplierController = require('./controllers/suppliercontroller');
+var UserController = require('./controllers/usercontroller');
 
 // What environment? Prod or Dev
 var ENV = process.argv[2] || 'dev';
