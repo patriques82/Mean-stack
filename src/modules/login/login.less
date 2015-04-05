@@ -1,0 +1,59 @@
+.profile-img
+{
+    // width: 96px;
+    // height: 96px;
+    margin: 0 auto 10px;
+    padding: 0 50px 0;
+    display: block;
+    width: 100%;
+    // -moz-border-radius: 50%;
+    // -webkit-border-radius: 50%;
+    // border-radius: 50%;
+}
+
+// This is a hack to get ui-bootstrap working with angular and bootstrap
+// https://github.com/angular-ui/bootstrap/issues/722
+.modal {
+  display: block;
+  height: 0;
+  overflow: visible;
+}
+
+.modal-body:before, .modal-body:after {
+  display: table;
+  content: " ";
+}
+.modal-header:before, .modal-header:after {
+  display: table;
+  content: " ";
+}
+
+// make content of header in regform dispay inline
+.authform-header-content {
+  display: inline;
+}
+
+// Display hand on x on top of regform to close it
+#authform-close {
+  cursor: pointer;
+  cursor: hand;
+}
+
+// This file contains styling for modals and should have styling for navbar
+// aswell. (TODO)
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+  &.ng-enter {
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: .5;
+    }
+  }
+  &.ng-leave {
+    opacity: .5;
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}

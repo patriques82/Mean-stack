@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="supplierApp" lang="en">
+  <head>
+    <!-- Help to enable html5 pushstate -->
+    <base href="/">
+    <title>O-viu</title>
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    user-scalable=no">
+    <!-- compiled CSS (server includeFiles) -->
+    <% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <!-- compiled JavaScript (server includeFiles) -->
+    <% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>" /></script><% }); %>
+  </head>
+
+  <body ng-controller="mainCtrl">
+    <% include header %>
+
+    <div>
+      <div ui-view="main"></div>
+    </div>
+
+    <!-- TODO: Inlcude footer in separate view -->
+    <% include footer %>
+
+  </body>
+</html>

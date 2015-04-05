@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-custom navbar-fixed-bottom hidden-sm hidden-md hidden-lg">
+  <div class="container">   
+    <div id="navbar" class="navbar-collapse collapse visible-xs">
+      <ul class="nav navbar-nav navbar-left">
+        <li ui-sref-active="active"><a ui-sref="hem"><span class="glyphicon icon-home"></span> Hem</a></li>
+        <li ng-if="isLoggedIn" ui-sref-active="active"><a ui-sref="leverantorer"><span class="glyphicon icon-Leverantor" ></span> Leverantörer</a></li>
+        <li ng-if="isLoggedIn" ui-sref-active="active"><a ui-sref="anvandare"><span
+            class="glyphicon glyphicon-briefcase"></span>
+          Användare</a></li>
+        <li ng-if="isLoggedIn" ui-sref-active="active"><a ui-sref="kpi"><span class="glyphicon icon-kpi"></span> KPI</a></li>
+
+        <li ng-if="isLoggedIn" class="dropdown">
+          <a ui-sref="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-asterisk"></span> Mer<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a ui-sref="#">Action</a></li>
+            <li><a ui-sref="#">Another action</a></li>
+            <li><a ui-sref="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a ui-sref="#">Separated link</a></li>
+            <li><a ui-sref="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+  	</div>
+  </div>
+</nav>

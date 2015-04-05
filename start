@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Execute this script: $ sudo ./start
+
+echo "---> Starting mongod..."
+sudo service mongod start
+echo "---> Starting production server..."
+./node_modules/forever/bin/forever \
+  start \
+  -al forever.log \
+  -ao out.log \
+  -ae err.log \
+  server.js prod

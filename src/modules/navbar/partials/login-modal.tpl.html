@@ -1,0 +1,56 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title authform-header-content">Login</h4>
+        <span type="button" class="glyphicon glyphicon-remove pull-right
+          authform-header-content" id="authform-close" data-dismiss="modal"
+          ng-click="loginDismiss()">
+        </span>
+      </div>
+
+      <div class="modal-body">
+        <form ng-submit="loginUser(user)" name="loginForm" novalidate>
+          <div class="alert alert-danger" role="alert" ng-show="failure && message">
+            {{message}}
+          </div>
+
+          <div class="form-group">
+            <label for="user-email" class="control-label">
+              Email:
+            </label>
+            <input type="text" class="form-control" id="user-email"
+              name="userEmail"
+              ng-model="user.email"
+              placeholder="Din mail">
+          </div>
+
+          <div class="form-group">
+            <label for="user-password" class="control-label">
+              Lösenord:
+            </label>
+            <input type="password" class="form-control" id="user-password"
+              name="userPassword"
+              ng-model="user.password"
+              placeholder="Ditt lösenord">
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Logga in
+          </button>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"
+          ng-click="loginDismiss()">
+          Stäng
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+

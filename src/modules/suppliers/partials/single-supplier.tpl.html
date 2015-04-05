@@ -1,0 +1,83 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-2">
+	        <div id="bc1" class="btn-group btn-breadcrumb">
+	            <a ui-sref="hem" class="btn btn-default"><i class="glyphicon icon-home"></i></a>
+	            <a ui-sref="leverantorer" class="btn btn-default"><div>Leverantörer</div></a>
+	            <a class="active btn btn-default"><div>{{selectedSupplier.name || "Hittade ingen leverantör"}}</div></a>
+	        </div>
+	    </div>
+	</div>
+
+<!-- 	<div class="row">
+		<div class="col-sm-3 col-sm-offset-2">
+			<ul class="breadcrumb">
+			  <li><a ui-sref="hem">Hem</a></li>
+			  <li><a ui-sref="leverantorer">Leverantörer</a></li>
+			  <li class="active">{{selectedSupplier.title}}</li>
+			</ul>
+		</div>
+	</div> -->
+</div>
+
+<div id="single-supplier" class="container-fluid">
+	<div class="row row-offcanvas row-offcanvas-left">
+		<div class="hidden-xs col-sm-3 sidebar-offcanvas" id="sidebarsuppliers">
+	      	<div class="card" id="sokruta">
+	      		<hr>
+		      	<div class="input-group col-xs-12">
+			        <input type="search" class="form-control" placeholder="Sök Leverantörer" name="srch-term" id="srch-term" ng-model="search" typeahead="supplier as supplier.title for supplier in suppliers | filter:$viewValue | limitTo:8" />
+			        <div class="input-group-btn">
+			            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			        </div><!--/.input-group-btn-->
+	        	</div><!--/.input-group-->
+	        	<hr>
+		      	<div ng-repeat="supplier in suppliers | filter:search | orderBy:'title'">
+		          	<a ui-sref="leverantorer.leverantor({ supplier_id: supplier._id })"><h2>{{supplier.name}}</h2></a>
+		          	<rating ng-model="supplier.rating" max="5" data-readonly="isReadonly"></rating>
+		      		<p>{{supplier.description}} </p>
+		      	</div><!--/ng-repeat-->
+		      	<!-- <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" boundary-links="true"></pagination> -->
+	      	</div><!--/#sokruta-->
+	    </div><!--/#sidebarsuppliers"-->
+		<div class="col-xs-12 col-sm-8">
+			<div class="card">
+				<div class="row">
+					<div class="text-left col-xs-9"> 
+						<h1>{{selectedSupplier.name || "Hittade ingen leverantör"}}</h1>
+					</div>
+					<div class="text-right col-xs-3">
+						<button type="button" ng-show="selectedSupplier" ng-click="deleteSupplier(selectedSupplier.supplier_id)" class="btn btn-danger text-right">Ta bort leverantör</button>
+					</div>
+				</div>
+				<div class="row">
+					<div ng-show="selectedSupplier">
+						<div class="col-xs-12">
+							<div class="star2x">							
+								<rating ng-model="singleSupplier.rating" max="5" data-readonly="isReadonly" state-on="'rating-selected'" state-off="'rating'"></rating>
+							</div>
+							<p>Leverantörsansvarig: {{selectedSupplier.supplierManager}}</p>
+							<hr>
+							<p>Beskrivning: {{selectedSupplier.description}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div><!--/.col-xs-12.col-sm-10-->
+	    <!-- <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+	      <div class="text-center col-xs-12 list-group pull-right" id="handelser">
+	        <h3>HÄNDELSER</h3>
+	        <a ui-sref="#" class="list-group-item active">Händelse 1</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 2</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 3</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 4</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 5</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 6</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 7</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 8</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 9</a>
+	        <a ui-sref="#" class="list-group-item">Händelse 10</a>
+	      </div>
+	    </div> --><!--/.sidebar-offcanvas-->
+	</div><!--/row-->
+</div><!--/.container-fluid-->

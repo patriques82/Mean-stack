@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "---> Stopping node server..."
+./node_modules/forever/bin/forever stop server.js
+echo "---> Stopping mongodb..."
+sudo service mongod stop
