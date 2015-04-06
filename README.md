@@ -65,26 +65,22 @@ mean-stack/
   |  |  |- <app logic>
   |  |- app.js
   |- views/
+  |  |- header.ejs
+  |  |- footer.ejs
   |  |- index.ejs
-  |- .bowerrc
   |- bower.json
   |- config.app.js
   |- Gruntfile.js
   |- package.json
-  |- post_install.sh
-  |- Procfile
   |- server.js
 ```
 
+- `api/` - backend code. [Read more &raquo;](api/README.md)
+- `public` - compiled code which is actually used by index.html
 - `src/` - application sources. [Read more &raquo;](src/README.md)
-- `views/index.ejs` - rendered as index.html by express (the entry point of app)
-- `public` - compiled code which is actually used in index.html
+- `views/` - rendered as index.html by express (the entry point of the SPA)
 - `public/lib` - third-party libraries. [Bower](http://bower.io) will install
-  packages here. Anything added to this directory will need to be manually added
-  to `build.config.js` and `karma/karma-unit.js` to be picked up by the build
-  system.
-- `.bowerrc` - the Bower configuration file. This tells Bower to install
-  components into the `vendor/` directory.
+  packages here.
 - `bower.json` - this is our project configuration for Bower and it contains the
   list of Bower dependencies we need.
 - `build.config.js` - our customizable build settings; see "The Build System"

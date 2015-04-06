@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     jwt = require('jsonwebtoken'),
-    config = require('../config.app');
+    config = require('./config.backend');
 
 // Controllers for specific resources
 var UserController = require('./controllers/usercontroller');

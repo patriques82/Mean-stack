@@ -3,13 +3,6 @@
  *
  */
 module.exports = {
-  // login through shell:
-  // mongo ds055210.mongolab.com:55210/oviu-prod2 -u o-viu-developer1 -p secret
-  db: {
-    dev: 'mongodb://localhost:27017/dev-db',
-    prod: 'production-db'
-  },
-
   /**
    * `build_dir` is where the appspecific files are minified and concatenated
    */
@@ -80,9 +73,6 @@ module.exports = {
     scripts: [
       "js/main.js"
     ]
-  },
-
-  // SECRETS...
-  super_secret: "I625hbHHbbsfsgk91873KJHKKKlOUHYB1qQQQutyyyg6ygYYTF"
+  }
 
 };

@@ -1,6 +1,6 @@
 var User = require('../models/user'),
     jwt = require('jsonwebtoken'),
-    config = require('../../config.app');
+    config = require('../config.backend');
 
 // Lists all users
 module.exports.list = function(req, res) {
