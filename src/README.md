@@ -1,5 +1,7 @@
 ### Overview
 
+The Single-Page-Application. Here lies the main application structure. During
+compilation the contents of this directory is compiled to `mean-stack/public/js/main.js`
 
 ### Overall Directory Structure
 
