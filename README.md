@@ -83,9 +83,7 @@ mean-stack/
   packages here.
 - `bower.json` - this is our project configuration for Bower and it contains the
   list of Bower dependencies we need.
-- `build.config.js` - our customizable build settings; see "The Build System"
-  below.
-- `Gruntfile.js` - our build script; see "The Build System" below.
+- `Gruntfile.js` - our build script.
 - `package.json` - metadata about the app, used by NPM and our build script. Our
-  NPM dependencies are listed here.
+   NPM dependencies are listed here.
 

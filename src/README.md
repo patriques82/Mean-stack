@@ -1,7 +1,9 @@
 ### Overview
 
 The Single-Page-Application. Here lies the main application structure. During
-compilation the contents of this directory is compiled to `mean-stack/public/js/main.js`
+compilation the javascript contents of this directory is compiled to
+`mean-stack/public/js/main.js` and the less content is compiled to
+`mean-stack/public/css/main.css`.
 
 ### Overall Directory Structure
 
