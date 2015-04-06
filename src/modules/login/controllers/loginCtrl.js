@@ -17,12 +17,12 @@ angular.module('login.controllers.loginctrl', [])
         $scope.user.password = '';
       } else { // success: store token
         authService.setToken(data.token);
-        $state.go("hem");
+        $state.go("home");
       }
     })
     .error(function (err) {
       $scope.failure = true;
-      $scope.message = "Något gick fel. Försök igen och kontakta support om felet kvarstår.";
+      $scope.message = "Something went wrong. Contact support if the error persist.";
     });
   };
 
@@ -35,7 +35,7 @@ angular.module('login.controllers.loginctrl', [])
     });
     // function for when result gets back from registration
     regModal.result.then(function (data) {
-      $state.go("hem");
+      $state.go("home");
     });
   };
 

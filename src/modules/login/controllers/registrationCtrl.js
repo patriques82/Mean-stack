@@ -45,7 +45,7 @@ angular.module('login.controllers.registrationctrl', [])
     // Something went wrong with connection
     .error(function(err) {
         $scope.success = false;
-        $scope.message = "Något gick fel. Försök igen och kontakta support om felet kvarstår.";
+        $scope.message = "Something went wrong. Contact support if the error persist.";
     });
   };
 
