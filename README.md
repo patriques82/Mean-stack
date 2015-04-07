@@ -32,6 +32,8 @@ $ git push
 Eat and sleep...
 
 $ git pull
+$ npm install
+$ mongod
 $ grunt develop
 
 Code...
